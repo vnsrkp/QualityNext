@@ -4,6 +4,10 @@
 
 Quality Forum is a comprehensive platform designed to bridge communication between hostellers and authorities, facilitating transparent reviews and feedback on hostel facilities. With a focus on enhancing the quality of life for residents, the platform offers a centralized hub for sharing insights on various aspects such as mess food quality, laundry services, cleanliness, and more.
 
+## Credentials
+Use email: warden@imsec.ac.in
+    password : 1234
+
 ## Key Features
 
 * **Transparent Reviews:** Enables users to share detailed evaluations on hostel facilities, including mess food quality, laundry services, cleanliness by sweepers, Wi-Fi performance, and more.
