@@ -9,6 +9,7 @@ import Container from "@mui/material/Container";
 import { Typography } from "@mui/material";
 import axios from "axios";
 import { Popup, failToast, successToast } from "./SuccessPopup";
+import { addUser } from "../actions";
 
 const AddStudent = (props) => {
   const [formData, setFormData] = useState({
@@ -49,11 +50,9 @@ const AddStudent = (props) => {
       password: data.get("password"),
     };
     try {
-      const response = await axios.post("/api/user", finalData);
-      if (response) {
-        successToast("Account Created!");
-        console.log(response);
-      }
+      const response = await addUser(finalData)
+      console.log(response)
+      successToast("User Created Successfully!")
     } catch (error) {
       failToast("Something Went Wrong!");
       console.log(error);

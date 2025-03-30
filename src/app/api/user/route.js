@@ -6,6 +6,9 @@ export async function POST(req) {
   try {
     const token = await getToken({ req: req });
     const data = await req.json();
+    if(data.ROLE !== "STUDENT"){
+      return NextResponse.json({data:"unauthorized"},{status: 500})
+    }
     const { password } = data;
     const hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
     const finalData = { ...data, password: hashedPassword };
